@@ -54,12 +54,16 @@ int numberN = Convert.ToInt32(Console.ReadLine());
 int count = 1;
 void Perebor(int count, int numberN)
 {
-    while (count < numberN)
+    while (count <= numberN)
     {
-        Console.Write(count + ", ");
+        if (count % 2 == 0)
+        {
+            Console.Write(count);
+            if (count != numberN && count != (numberN-1)) Console.Write(", ");
+        } 
         count++;
     }
 }
 Perebor(count, numberN);
-Console.Write(numberN);
+
 
